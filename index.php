@@ -94,19 +94,3 @@ for ($i = 1; $i <= $qtd_registros; $i++) {
 	echo $sqlPessoaJuridica;
 	echo $sqlEmpregado;
 }
-
-/*
-SCRIPT para rodar após definir os dados da 50 para duplicar na 51.
-
-update SRH0099.SRH0099.CAD_51EMPREG
-set
-B51002NomEmpregado = PESSOA.B50002NomeRSocial,
-B51046TipoConta = PESSOA.B50046TipoConta,
-B51047AgenciaFunc = PESSOA.B50047AgenciaFunc,
-B5104AAgenciaDigito = PESSOA.B5004AAgenciaDigito
-from 
-	(select B50001NumMatricula, B50002NomeRSocial, B50046TipoConta, B50047AgenciaFunc, B5004AAgenciaDigito 
-		from SRH0099.SRH0099.CAD_50PESSOA ) PESSOA
-where PESSOA.B50001NumMatricula = B51901IdPessoa
-
-*/
